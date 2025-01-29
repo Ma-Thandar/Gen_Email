@@ -25,6 +25,6 @@ st.write("**********************************************************************
 
 loader = WebBaseLoader("https://jobs.nike.com/job/R-49848?from=job%20search%20funnel")
 #https://jobs.nike.com/job/R-33460
-#page_data=loader.load().pop().page_content
+page_data=loader.load().pop().page_content
 #print(page_data)
 #st.write(page_data)
