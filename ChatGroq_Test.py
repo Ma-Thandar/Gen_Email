@@ -22,8 +22,8 @@ response = llm.invoke(prompt)
 #print(response.content)
 st.write("Results ", response.content)
 st.write("********************************************************************************************")
-st.markdown("<h3 style='text-align: center; color: violet;'>AI Baydin ♈ ♉ ♓</h2>", unsafe_allow_html=True)
-st.header("မြန်မာ့ရိုးရာ ဗေဒင် နည်းပညာဖြင့် လုပ်ငန်းအမည်ပေးခြင်း \n :gray[AI Baydin] :aries: :taurus: :pisces:")
+st.markdown("<h3 style='text-align: center; color: violet;'>Page Content ♈ ♉ ♓</h2>", unsafe_allow_html=True)
+
 
 loader = WebBaseLoader("https://jobs.nike.com/job/R-49848?from=job%20search%20funnel")
 #https://jobs.nike.com/job/R-33460
@@ -31,7 +31,7 @@ page_data=loader.load().pop().page_content
 #print(page_data)
 st.write(page_data)
 st.write("********************************************************************************************")
-
+st.markdown("<h3 style='text-align: center; color: violet;'>Extract Content and JSON FOrmat ♈ ♉ ♓</h2>", unsafe_allow_html=True)
 
 prompt_extract = PromptTemplate.from_template(
     """
