@@ -1,4 +1,4 @@
 streamlit
 langchain-groq
-WebBaseLoader
+langchain_community
 #chromadb
