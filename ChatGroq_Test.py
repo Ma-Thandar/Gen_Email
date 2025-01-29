@@ -14,7 +14,7 @@ prompt = "the man who created electric bulb"
 llm = ChatGroq(    
     temperature=0,
     groq_api_key='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',
-    model_name='llama-3.1-8b-instant'  
+    model_name='llama-3.1-70b-versatile'  
 )
 response = llm.invoke(prompt)
 #print(response.content)
