@@ -4,5 +4,4 @@ langchain-community
 #requests
 #html2text
 langchain-groq
-langchain_community
 #chromadb
