@@ -6,6 +6,8 @@ from langchain_groq import ChatGroq
 
 # chroma_client = chromadb.Client()
 # collection = chroma_client.create_collection(name="new_collection")
+st.set_page_config(layout="wide")
+st.title("Hello Warzo")
 
 prompt = "the man who created electric bulb"
 
@@ -18,5 +20,4 @@ response = llm.invoke(prompt)
 #print(response.content)
 st.write("Results ", response.content)
 
-st.set_page_config(layout="wide")
-st.title("Hello Warzo")
+
