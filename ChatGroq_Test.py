@@ -31,7 +31,7 @@ page_data=loader.load().pop().page_content
 #print(page_data)
 st.write(page_data)
 st.write("********************************************************************************************")
-st.markdown("<h3 style='text-align: center; color: violet;'>Extract Content and JSON FOrmat ♈ ♉ ♓</h2>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: violet;'>Extract Content and JSON Format ♈ ♉ ♓</h2>", unsafe_allow_html=True)
 
 prompt_extract = PromptTemplate.from_template(
     """
@@ -48,4 +48,13 @@ prompt_extract = PromptTemplate.from_template(
 chain_extract = prompt_extract | llm
 res = chain_extract.invoke(input={'page_data':page_data})
 st.write(res.content)
-type(res.content)
+st.write(type(res.content))
+
+st.write("********************************************************************************************")
+st.markdown("<h3 style='text-align: center; color: violet;'>JSON Parser ♈ ♉ ♓</h2>", unsafe_allow_html=True)
+
+from langchain_core.output_parsers import JsonOutputParser
+json_parser=JsonOutputParser()
+json_res=json_parser.parse(res.content)
+st.write(json_res)
+st.write(type(json_res))
