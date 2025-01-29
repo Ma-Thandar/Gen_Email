@@ -48,3 +48,4 @@ prompt_extract = PromptTemplate.from_template(
 chain_extract = prompt_extract | llm
 res = chain_extract.invoke(input={'page_data':page_data})
 st.write(res.content)
+type(res.content)
