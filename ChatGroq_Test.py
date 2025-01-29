@@ -1,8 +1,8 @@
 import streamlit as st
 from datetime import date
 from langchain_groq import ChatGroq
-import chromadb
-import requests
+#import chromadb
+
 
 # chroma_client = chromadb.Client()
 # collection = chroma_client.create_collection(name="new_collection")
