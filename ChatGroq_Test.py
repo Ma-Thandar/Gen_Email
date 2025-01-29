@@ -2,6 +2,7 @@ import streamlit as st
 from datetime import date
 from langchain_groq import ChatGroq
 from langchain_community.document_loaders import WebBaseLoader
+from langchain_core.prompts import PromptTemplate
 #import chromadb
 
 
@@ -22,9 +23,26 @@ response = llm.invoke(prompt)
 st.write("Results ", response.content)
 st.write("********************************************************************************************")
 
-
 loader = WebBaseLoader("https://jobs.nike.com/job/R-49848?from=job%20search%20funnel")
 #https://jobs.nike.com/job/R-33460
 page_data=loader.load().pop().page_content
 #print(page_data)
 st.write(page_data)
+st.write("********************************************************************************************")
+
+
+prompt_extract = PromptTemplate.from_template(
+    """
+    ###Scraped text from the website :
+    {page_data}
+    ### Instruction:
+    The scraped text is from the career's page of a website.
+    Your job is to extract the job posting and return them in JSON format containing the following keys: 
+    'role', 'experience', 'skills' and 'description'.
+    Only return the valid JSON.
+    ### Valid JSON (No Preamble):
+    """
+)
+chain_extract = prompt_extract | llm
+res = chain_extract.invoke(input={'page data':page_data})
+st.write(res.content)
