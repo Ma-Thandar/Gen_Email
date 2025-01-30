@@ -3,7 +3,7 @@ from datetime import date
 from langchain_groq import ChatGroq
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_core.prompts import PromptTemplate
-#import chromadb
+import chromadb
 
 
 # chroma_client = chromadb.Client()
@@ -67,3 +67,6 @@ st.markdown("<h3 style='text-align: center; color: violet;'>TechStack ♈ ♉ �
 import pandas as pd
 df = pd.read_csv('./TechStack.csv')
 st.write(df)
+
+chroma_client = chromadb.PersistentClient('./vectorstore')
+collection = chroma_client.get_or_create_collection(name="portfolio")
