@@ -68,6 +68,6 @@ import pandas as pd
 df = pd.read_csv('./TechStack.csv')
 st.write(df)
 
-import chromadb
-chroma_client = chromadb.Client()
+import chromadb as cmdb
+chroma_client = cmdb.Client()
 collection = chroma_client.create_collection(name="my_collection")
