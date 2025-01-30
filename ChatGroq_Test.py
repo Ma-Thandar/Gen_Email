@@ -60,3 +60,10 @@ json_parser=JsonOutputParser()
 json_res=json_parser.parse(res.content)
 st.write(json_res)
 #st.write(type(json_res))
+
+st.write("********************************************************************************************")
+st.markdown("<h3 style='text-align: center; color: violet;'>TechStack ♈ ♉ ♓</h2>", unsafe_allow_html=True)
+
+import pandas as pd
+df = pd.read_csv('TechStack.csv')
+st.write(df)
