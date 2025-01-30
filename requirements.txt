@@ -1,7 +1,9 @@
 streamlit
+chromadb
 langchain-community
+langchain-groq
 #beautifulsoup4
 #requests
 #html2text
-langchain-groq
-chromadb
+
+
