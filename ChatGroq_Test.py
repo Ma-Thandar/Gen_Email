@@ -16,7 +16,7 @@ prompt = "the man who worked on the moon first"
 
 llm = ChatGroq(    
     temperature=0,
-    groq_api_key='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',
+    groq_api_key='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',
     model_name='llama-3.3-70b-versatile'  
 )
 response = llm.invoke(prompt)
