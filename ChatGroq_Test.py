@@ -65,5 +65,5 @@ st.write("**********************************************************************
 st.markdown("<h3 style='text-align: center; color: violet;'>TechStack ♈ ♉ ♓</h2>", unsafe_allow_html=True)
 
 import pandas as pd
-df = pd.read_csv('TechStack.csv')
+df = pd.read_csv('./TechStack.csv')
 st.write(df)
