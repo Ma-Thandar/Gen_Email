@@ -11,7 +11,8 @@ from langchain_core.prompts import PromptTemplate
 st.set_page_config(layout="wide")
 st.title("Hello Warzo")
 
-prompt = "the man who created electric bulb"
+#prompt = "the man who created electric bulb"
+prompt = "the man who worked on the moon first"
 
 llm = ChatGroq(    
     temperature=0,
