@@ -26,7 +26,8 @@ st.write("**********************************************************************
 st.markdown("<h3 style='text-align: center; color: violet;'>Page Content ♈ ♉ ♓</h2>", unsafe_allow_html=True)
 
 
-loader = WebBaseLoader("https://jobs.nike.com/job/R-33460")
+loader = WebBaseLoader("https://careers.nike.com/lead-software-engineer/job/R-48874")
+#https://jobs.nike.com/job/R-33460
 #https://jobs.nike.com/job/R-49848?from=job%20search%20funnel
 page_data=loader.load().pop().page_content
 #print(page_data)
